@@ -68,27 +68,44 @@
 
 .contenitore-chat
 {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
     width: 70%;
     border: 1px solid red;
 }
 
 .chat
 {
+    height: 70vh;
     padding: 0 24px;
     background-color: tomato;
+    overflow: hidden;
 }
+
+/* componente : fumetto messaggi */
 
 .casella-chat
 {
     padding: 16px;
+    margin-bottom: 16px;
     border: 1px solid #fff;
 }
 
+.inviati
+{
+    text-align: right;
+}
+
+.ricevuti
+{
+    text-align: left;
+}
+
+/* FINE componente : fumetto messaggi */
+
 .barra-invio
 {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     padding: 16px;
     background-color: orange;
