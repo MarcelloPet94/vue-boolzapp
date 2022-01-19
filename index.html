@@ -25,14 +25,14 @@
             <div class="cerca-utente">
                 <input type="text" placeholder="search">
             </div>
-            <div class="sezione-contatti" v-for="(utente, indice) in contacts">
+            <div v-for="(utente, indice) in contacts">
                 <div class="utente">
                     <div class="icona-utente">
-                        <i :class="contacts[indice].avatar"></i>
+                        <i :class="utente.avatar"></i>
                     </div>
                     <div class="nome-utente">
-                        <p>{{contacts[indice].name}}</p>
-                        <span>messaggio...</span>
+                        <p>{{utente.name}}</p>
+                        <p class="messaggi-info">messaggio...</p>
                     </div>
                 </div>
             </div>
@@ -50,17 +50,11 @@
                 </div>
             </div>
             <div class="chat">
-                <div class="casella-chat inviati">
+                <div class="casella-chat" :class="divisioneMessaggi(0)" v-for="(utente, indice) in contacts[0].messages">
                     <div>
-                        <p>messaggio inviato</p>
-                        <p>ora</p>
+                        <p>{{utente.text}}</p>
+                        <p class="messaggi-info">ore</p>
                     </div>    
-                </div>
-                <div class="casella-chat ricevuti">
-                    <div>
-                        <p>messaggio inviato</p>
-                        <p>ora</p>
-                    </div> 
                 </div>
             </div>
             <div class="barra-invio">

@@ -51,7 +51,7 @@
     margin-right: 8px;
 }
 
-.utente .nome-utente span
+p.messaggi-info
 {
     font-size: 12px;
     color: grey;
@@ -79,6 +79,11 @@
 }
 
 /* componente : fumetto messaggi */
+
+.casella-chat
+{
+    margin-bottom: 16px;
+}
 
 .casella-chat p
 {

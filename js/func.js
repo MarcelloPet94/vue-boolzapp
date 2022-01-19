@@ -1,5 +1,6 @@
 let app = new Vue ({
     el: '#boolzap',
+    clickUtente: 0,
     data:
     {
         contacts: [
@@ -91,5 +92,20 @@ let app = new Vue ({
                 ],
             },
         ]    
+    },
+    methods:
+    {
+        divisioneMessaggi: function(index)
+        {
+            console.log(this.contacts[index].messages.status)
+            if(this.contacts[index].messages.status == 'sent')
+            {
+                return "inviati";
+            }
+            else
+            {
+                return "ricevuti"
+            } 
+        } 
     }
 });
