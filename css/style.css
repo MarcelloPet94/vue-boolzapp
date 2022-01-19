@@ -82,6 +82,7 @@ p.messaggi-info
 
 .casella-chat
 {
+    display: flex;
     margin-bottom: 16px;
 }
 
@@ -90,23 +91,26 @@ p.messaggi-info
     padding: 8px;
 }
 
-.inviati
+.fumetto
 {
-    display: flex;
+    border-radius: 15px;
+}
+
+.sent
+{
     justify-content: right;
     text-align: right;
 }
 
-.inviati > div {background-color: lightgreen;}
+.sent > div {background-color: lightgreen;}
 
-.ricevuti
+.received
 {
-    display: flex;
     justify-content: left;
     text-align: left;
 }
 
-.ricevuti > div {background-color: lightyellow;}
+.received > div {background-color: lightyellow;}
 
 /* FINE componente : fumetto messaggi */
 
