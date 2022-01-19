@@ -10,7 +10,6 @@
     justify-content: center;
     margin: 0 auto;
     padding: 10vh 0;
-    border: 3px solid yellow;
 }
 
 /* contenuto-app di tutto */
@@ -21,7 +20,6 @@
     justify-content: center;
     width: calc(100% - 20%);
     height: 80vh;
-    border: 2px solid blue;
 }
 
 /* barra di SX chat utenti */
@@ -39,8 +37,7 @@
     display: flex;
     align-items: center;
     padding:8px;
-    background-color: lightblue;
-    border: 1px solid #fff;
+    border: 1px solid lightgray;
 }
 
 .utente .icona-utente
@@ -72,35 +69,39 @@
     flex-direction: column;
     justify-content:space-between;
     width: 70%;
-    border: 1px solid red;
 }
 
 .chat
 {
     height: 70vh;
-    padding: 0 24px;
-    background-color: tomato;
+    padding: 24px;
     overflow: hidden;
 }
 
 /* componente : fumetto messaggi */
 
-.casella-chat
+.casella-chat p
 {
-    padding: 16px;
-    margin-bottom: 16px;
-    border: 1px solid #fff;
+    padding: 8px;
 }
 
 .inviati
 {
+    display: flex;
+    justify-content: right;
     text-align: right;
 }
 
+.inviati > div {background-color: lightgreen;}
+
 .ricevuti
 {
+    display: flex;
+    justify-content: left;
     text-align: left;
 }
+
+.ricevuti > div {background-color: lightyellow;}
 
 /* FINE componente : fumetto messaggi */
 
@@ -108,7 +109,7 @@
 {
     width: 100%;
     padding: 16px;
-    background-color: orange;
+    border: 1px solid lightgray;
 }
 
 /* FINE barra di DX chat utenti */

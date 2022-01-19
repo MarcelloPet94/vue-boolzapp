@@ -12,20 +12,32 @@
     
 <div id="boolzap">
     <div class="contenuto-app">
+        <!-- layout sinistra-->
         <div class="contatti-utenti">
-            <div class="cerca-utente">
-                <input type="text">
-            </div>
             <div class="utente">
                 <div class="icona-utente">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="nome-utente">
-                    <p>Giovanni</p>
-                    <span>messaggio...</span>
+                    <p>My Names</p>
+                </div>
+            </div>
+            <div class="cerca-utente">
+                <input type="text" placeholder="search">
+            </div>
+            <div class="sezione-contatti" v-for="(utente, indice) in contacts">
+                <div class="utente">
+                    <div class="icona-utente">
+                        <i :class="contacts[indice].avatar"></i>
+                    </div>
+                    <div class="nome-utente">
+                        <p>{{contacts[indice].name}}</p>
+                        <span>messaggio...</span>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- fine layout sinistra-->
         <div class="contenitore-chat">
             <div class="utente-chat-corrente">
                 <div class="utente">
@@ -39,42 +51,17 @@
             </div>
             <div class="chat">
                 <div class="casella-chat inviati">
-                    <p>messaggio inviato</p>
+                    <div>
+                        <p>messaggio inviato</p>
+                        <p>ora</p>
+                    </div>    
                 </div>
                 <div class="casella-chat ricevuti">
-                    <p>messaggio ricevuto</p>
+                    <div>
+                        <p>messaggio inviato</p>
+                        <p>ora</p>
+                    </div> 
                 </div>
-                <div class="casella-chat inviati">
-                    <p>messaggio inviato</p>
-                </div>
-                <div class="casella-chat ricevuti">
-                    <p>messaggio ricevuto</p>
-                </div>
-                <div class="casella-chat inviati">
-                    <p>messaggio inviato</p>
-                </div>
-                <div class="casella-chat ricevuti">
-                    <p>messaggio ricevuto</p>
-                </div>
-                <div class="casella-chat inviati">
-                    <p>messaggio inviato</p>
-                </div>
-                <div class="casella-chat ricevuti">
-                    <p>messaggio ricevuto</p>
-                </div>
-                <div class="casella-chat inviati">
-                    <p>messaggio inviato</p>
-                </div>
-                <div class="casella-chat ricevuti">
-                    <p>messaggio ricevuto</p>
-                </div>
-                <div class="casella-chat inviati">
-                    <p>messaggio inviato</p>
-                </div>
-                <div class="casella-chat ricevuti">
-                    <p>messaggio ricevuto</p>
-                </div>
-                
             </div>
             <div class="barra-invio">
                 <input type="text" value="invia">
