@@ -4,6 +4,7 @@ let app = new Vue ({
     {
         clickUtente: null,
         messaggio: '',
+        rispostaDefault: 'Non posso rispondere',
         inviato : null,
         percorsoMessaggio : null,
         contacts: [
@@ -77,7 +78,7 @@ let app = new Vue ({
                 ],
             },
             {
-                name: 'Luisa',
+                name: 'Ecaterina',
                 avatar: 'fas fa-user',
                 visible: true,
                 messages:
@@ -109,6 +110,15 @@ let app = new Vue ({
             this.percorsoMessaggio = this.contacts[index].messages
             this.percorsoMessaggio.push(this.inviato)
             this.messaggio = ''
+            this.rispostaAutomatica(index)
+        },
+        rispostaAutomatica : function(index)
+        {
+            this.inviato = {date: '15/15/15' , text : this.rispostaDefault , status : 'received'}
+            this.percorsoMessaggio = this.contacts[index].messages
+            setTimeout(() => {
+                this.percorsoMessaggio.push(this.inviato)
+            }, 3000);
         }
     }
 });
