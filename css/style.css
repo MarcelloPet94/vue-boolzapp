@@ -24,6 +24,21 @@
 
 /* barra di SX chat utenti */
 
+.cerca-utente
+{
+    padding: 16px;
+}
+
+.cerca-utente i
+{
+    color: lightgray;
+}
+
+.cerca-utente input
+{
+    border: none;
+}
+
 .contatti-utenti
 {
     width: 30%;
