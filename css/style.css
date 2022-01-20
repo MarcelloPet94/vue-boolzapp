@@ -72,6 +72,9 @@
     margin-right: 8px;
 }
 
+.show {display: block;}
+.hide {display: none;}
+
 p.messaggi-info
 {
     font-size: 12px;

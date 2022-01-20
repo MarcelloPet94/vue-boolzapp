@@ -3,9 +3,9 @@ let app = new Vue ({
     data:
     {
         clickUtente: null,
+        nomeValore: '',
         messaggio: '',
         rispostaDefault: 'Non posso rispondere',
-        inviato : null,
         percorsoMessaggio : null,
         contacts: [
             {
@@ -110,15 +110,31 @@ let app = new Vue ({
             this.percorsoMessaggio = this.contacts[index].messages
             this.percorsoMessaggio.push(this.inviato)
             this.messaggio = ''
-            this.rispostaAutomatica(index)
+            setTimeout(() => {
+                this.rispostaAutomatica(index)
+            }, 3000);
         },
         rispostaAutomatica : function(index)
         {
-            this.inviato = {date: '15/15/15' , text : this.rispostaDefault , status : 'received'}
-            this.percorsoMessaggio = this.contacts[index].messages
-            setTimeout(() => {
-                this.percorsoMessaggio.push(this.inviato)
-            }, 3000);
-        }
+            const inviato = {date: '15/15/15' , text : this.rispostaDefault , status : 'received'}
+            this.contacts[index].messages.push(inviato)
+        },
+        ricercaContatti: function()
+        {
+            for (let index = 0; index < this.contacts.length; index++)
+            {
+                const element = this.contacts[index];
+                const testo = element.name.toLowerCase();
+                if(!testo.toLowerCase().includes(this.nomeValore.toLowerCase()))
+                {
+                    element.visible = false; 
+                }
+                else
+                {
+                    element.visible = true; 
+                }
+
+            }
+        }    
     }
 });

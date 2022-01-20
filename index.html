@@ -24,9 +24,9 @@
             </div>
             <div class="cerca-utente">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="search">
+                <input type="text" placeholder="search" v-model="nomeValore" @keyup="ricercaContatti">
             </div>
-            <div v-for="(utente, indice) in contacts" @click="apriContatto(indice)">
+            <div v-for="(utente, indice) in contacts" @click="apriContatto(indice)" :class="utente.visible ? 'show' : 'hide' ">
                 <div class="utente">
                     <div class="icona-utente">
                         <i :class="utente.avatar"></i>
