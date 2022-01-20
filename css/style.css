@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+* input
+{
+    outline: none;
+}
+
 #boolzap
 {
     display: flex;
@@ -170,9 +175,25 @@ p.messaggi-info
 
 .barra-invio
 {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     padding: 16px;
     border: 1px solid lightgray;
+}
+
+.barra-invio input
+{
+    width: 80%;
+    border: none;
+}
+
+.barra-invio button
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
 }
 
 /* FINE barra di DX chat utenti */
