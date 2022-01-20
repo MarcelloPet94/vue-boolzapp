@@ -3,6 +3,9 @@ let app = new Vue ({
     data:
     {
         clickUtente: null,
+        messaggio: '',
+        inviato : null,
+        percorsoMessaggio : null,
         contacts: [
             {
                 name: 'Michele',
@@ -99,6 +102,13 @@ let app = new Vue ({
         {
             this.clickUtente = index
             console.log(index)
+        },
+        aggiungiMessaggio : function(index)
+        {
+            this.inviato = {date: '15/15/15' , text : this.messaggio , status : 'sent'}
+            this.percorsoMessaggio = this.contacts[index].messages
+            this.percorsoMessaggio.push(this.inviato)
+            this.messaggio = ''
         }
     }
 });

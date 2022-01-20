@@ -62,8 +62,8 @@
                 <div v-else class="chat-vuota"><i class="fab fa-whatsapp"></i></div>    
             </div>
             <div class="barra-invio">
-                <input type="text" value="invia">
-                <button>Invia</button>
+                <input type="text" v-model="messaggio" placeholder="Scrivi un messaggio...">
+                <button @click="aggiungiMessaggio(clickUtente)">Invia</button>
             </div>
         </div> 
     </div>       
