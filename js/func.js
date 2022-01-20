@@ -2,7 +2,7 @@ let app = new Vue ({
     el: '#boolzap',
     data:
     {
-        clickUtente: 0,
+        clickUtente: null,
         contacts: [
             {
                 name: 'Michele',

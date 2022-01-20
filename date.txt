@@ -1,0 +1,20 @@
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at
+https://day.js.org/
+
+Per poter leggere una data in un formato diverso dal formato standard ISO 8601, è necessario aggiungere a day.js il plugin CustomParseFormat: 
+https://day.js.org/docs/en/parse/string-format
+
+Per installarlo, recuperare il link alla cdn e usaro come in questo esempio: https://day.js.org/docs/en/plugin/loading-into-browser
+
+Allo stesso modo, si possono utilizzare tutti gli altri plugin di day.js
+
+HTML
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/plugin/customParseFormat.min.js" integrity="sha512-nbPJ/ANJ1DCwUWGyfS+PY7RMysy5UnFyOzPTjzcphOuVbUqrukQAZ9kkNvTkPmItJRuuL5IqNufQTHPyxxpmig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+JS
+dayjs.extend(window.dayjs_plugin_customParseFormat)
+https://day.js.org/docs/en/installation/browser
+https://day.js.org/docs/en/parse/string-format
+https://day.js.org/docs/en/plugin/custom-parse-format
+https://day.js.org/docs/en/plugin/loading-into-browser
+
