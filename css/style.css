@@ -15,6 +15,7 @@
     justify-content: center;
     margin: 0 auto;
     padding: 10vh 0;
+    background-color:#075e54;
 }
 
 /* contenuto-app di tutto */
@@ -31,23 +32,30 @@
 
 .cerca-utente
 {
-    padding: 16px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    border-bottom: 1px solid lightgray;
 }
 
 .cerca-utente i
 {
+    margin-right: 8px;
     color: lightgray;
 }
 
 .cerca-utente input
 {
+    padding: 16px 0;
     border: none;
+    width: 100%;
 }
 
 .contatti-utenti
 {
     width: 30%;
-    border: 1px solid green;
+    border: 1px solid lightgray;
+    background-color: #fff;
     overflow: hidden;
 }
 
@@ -58,7 +66,7 @@
     display: flex;
     align-items: center;
     padding:8px;
-    border: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
 }
 
 .utente .icona-utente
@@ -90,7 +98,7 @@ p.messaggi-info
 .utente-chat-corrente
 {
     min-height: 50px;
-    border: 1px solid lightgray;
+    background-color: #fff;
 }
 
 .componente-chat-corrente
@@ -164,7 +172,7 @@ p.messaggi-info
     text-align: right;
 }
 
-.sent > div {background-color: lightgreen;}
+.sent > div {background-color: #dcf8c6;}
 
 .received
 {
@@ -182,7 +190,7 @@ p.messaggi-info
     justify-content: space-between;
     width: 100%;
     padding: 16px;
-    border: 1px solid lightgray;
+    background-color: #fff;
 }
 
 .barra-invio input
