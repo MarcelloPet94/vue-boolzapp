@@ -102,7 +102,7 @@ let app = new Vue ({
         apriContatto : function(index)
         {
             this.clickUtente = index
-            console.log(index)
+            console.log('Ritorna ' + this.clickUtente)
         },
         aggiungiMessaggio : function(index)
         {

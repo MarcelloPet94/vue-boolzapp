@@ -69,6 +69,11 @@
     border-bottom: 1px solid lightgray;
 }
 
+.utenteSelezionato
+{
+    background-color:rgb(233, 233, 233);
+}
+
 .utente .icona-utente
 {
     width: 32px;

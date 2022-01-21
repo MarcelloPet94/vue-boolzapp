@@ -27,7 +27,7 @@
                 <input type="text" placeholder="search" v-model="nomeValore" @keyup="ricercaContatti">
             </div>
             <div v-for="(utente, indice) in contacts" @click="apriContatto(indice)" :class="utente.visible ? 'show' : 'hide' ">
-                <div class="utente">
+                <div class="utente" :class="{utenteSelezionato : (clickUtente == indice)}">
                     <div class="icona-utente">
                         <i :class="utente.avatar"></i>
                     </div>
@@ -62,7 +62,7 @@
                 <div v-else class="chat-vuota"><i class="fab fa-whatsapp"></i></div>    
             </div>
             <div class="barra-invio">
-                <input type="text" v-model="messaggio" placeholder="Scrivi un messaggio...">
+                <input type="text" v-model="messaggio" placeholder="Scrivi un messaggio..." @keyup.enter="aggiungiMessaggio(clickUtente)">
                 <button @click="aggiungiMessaggio(clickUtente)">Invia</button>
             </div>
         </div> 
